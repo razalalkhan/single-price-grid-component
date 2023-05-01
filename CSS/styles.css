@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root{
+
+    --clr-primary-cyan: hsl(179, 62%, 43%);
+    --clr-primary-cyan-1: hsla(179, 62%, 43%, 0.9);
+    --clr-primary-b-yellow: hsl(71, 73%, 54%);  
+
+    --clr-neutral-l-gray: hsl(204, 43%, 93%);
+    --clr-neutral-g-blue: hsl(218, 22%, 67%);
+
+    --fs-body: 16px;
+    --fw-400:400;
+    --fw-700:700;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-family: 'Karla', sans-serif;
+    background-color:var(--clr-neutral-l-gray) ;
+    display:grid;
+    place-items:center;
+    justify-items: center;
+    min-height:100vh;
+    
+    
+}
+
+.container{
+
+    max-width:35.188rem;
+    display:grid;
+    background-color:white; 
+    border-radius: 0.5rem;
+    overflow: hidden;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    
+    'block-1 block-1'
+    'block-2 block-3';
+       
+}
+
+/*===============================================block-1 styling starts here ==================================================== */
+.block-1{
+    
+    grid-area: block-1;
+    background-color:white;
+    padding:2rem;
+    
+}
+
+h1{
+    font-size:1.5rem;
+    font-weight: var(--fw-700);
+    color:var(--clr-primary-cyan);
+    padding-bottom: 1rem;
+}
+
+h2{
+    font-size:1rem;
+    font-weight:var(--fw-700);
+    color:var(--clr-primary-b-yellow);
+    padding-bottom: 0.5rem;
+
+}
+
+.block-1 p{
+
+    font-size:0.875rem;
+    font-weight: 500;
+    color:var(--clr-neutral-g-blue);
+    line-height: 1.3rem;
+    opacity: 70%;
+}
+
+
+/*===============================================block-1 styling ends here ==================================================== */
+
+
+/*===============================================block-2 styling starts here ==================================================== */
+.block-2{
+
+    grid-area:block-2;
+    background-color:var(--clr-primary-cyan);
+    padding:2rem;
+    color:var(--clr-neutral-l-gray);
+}
+
+h3{
+
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.flex-option{
+
+    display:flex;
+    align-items:center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    padding-bottom:0.5rem;
+}
+
+.b2-p1 span{
+
+font-size: 1.5rem;
+font-weight: var(--fw-700);
+padding-right:0.6rem;
+
+}
+
+.b2-pm{
+    opacity: 40%;
+}
+
+.b2-p2{
+
+    font-size:0.9rem;
+    font-weight: 300;
+    opacity: 90%;
+    padding-bottom: 1.5rem;
+}
+
+.btn{
+   
+    width: 100%;
+    font-family: 'Karla', sans-serif;
+    background-color: var(--clr-primary-b-yellow);
+    color: white;
+    border:none;
+    padding:0.8rem 0;
+    border-radius: 0.3rem;
+    font-weight: var(--fw-700);
+    box-shadow: 0px 9px 16px hsl(179, 47%, 36%);
+
+}
+
+/*===============================================block-2 styling ends here ==================================================== */
+
+
+/*===============================================block-3 styling starts here ==================================================== */
+.block-3{
+
+    grid-area:block-3;
+    background-color:var(--clr-primary-cyan-1);
+    padding:2rem;
+    color:var(--clr-neutral-l-gray);
+
+}
+
+.block-3 p{
+
+    font-size: 0.75rem;
+    font-weight:100;
+    line-height: 1.5;
+}
+
+/*===============================================block-3 styling ends here ==================================================== */
+
+/*===============================================media query for mobile design starts here ==================================================== */
+
+@media only screen and (max-width:450px){
+
+
+    body{
+
+        margin:2rem;
+    }
+
+    .container{
+
+        max-width:23.5rem;
+        grid-template-areas: 
+        'block-1 block-1'
+        'block-2 block-2'
+        'block-3 block-3';
+
+    }
+
+    .block-1{
+        padding: 1.5rem 1rem;
+    }
+
+    h1{
+        font-size:1rem;
+
+    }
+
+    h2{
+
+        font-size:0.9rem;
+        padding-bottom: 1rem;
+    }
+
+    .block-2{
+        padding: 1.5rem 1rem;
+    }
+
+    .block-3{
+        padding: 1.5rem 1rem;
+    }
+}
+
+/*===============================================media query for mobile design ends here ==================================================== */
